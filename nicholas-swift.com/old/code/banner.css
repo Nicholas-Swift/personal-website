@@ -1,0 +1,94 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.banner {
+    height:90px;
+    background-color:#fff; /*Previous color:f0141e*/
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+.banner h2 {
+    /*font-family:'Roboto', sans-serif;*/
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:30px;
+    font-weight:300;
+    color:#333;
+    letter-spacing:2px;
+    /*text-transform:uppercase;*/
+    
+    display:inline-block;
+
+    padding-top:15px;
+    padding-left:25px;
+    float:left;
+}
+
+.banner p {
+    /*font-family:'Roboto', sans-serif;*/
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:18px;
+    font-weight:300;
+    color:#333;
+    /*text-transform:uppercase;*/
+
+    display:inline-block;
+
+    padding-top:25px;
+    padding-left:0px;
+    padding-right:40px;
+    padding-top: 34px;
+    float:right;
+}
+
+.banner a:link {color:inherit; text-decoration:none; text-shadow:none; -webkit-transition:0.2s;}
+.banner a:visited {color:inherit; text-decoration: none; text-shadow:none;}
+.banner a:hover, a:active, a:focus {color:#cb4154; text-shadow:none; -webkit-transition:0.2s;}
+
+/*-----------------------------------------------------Stuff for Mobile--------------------------------------------------------------*/
+
+/* First Tick */
+@media screen and (max-width:645px) {
+.banner {
+    margin-top:-18px;
+    height:120px;
+    width:100%;
+}
+
+.banner h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:20px;
+    font-weight:700;
+    color:#fff;
+    text-transform:uppercase;
+
+    display:block;
+
+    padding-top:25px;
+    padding-left:0px;
+    padding-right:0px;
+    float:none;
+
+    text-align:center;
+}
+
+.banner p {
+    font-size:13px;
+    display:inline;
+    float:none;
+    padding-left:12px;
+    padding-right:12px;
+}
+}
+
+/* Second Tick */
+@media screen and (max-width:415px) {
+    .banner {
+        height:142px;
+    }
+
+    .banner p {
+        padding-right:18px;
+        padding-left:18px;
+    }
+}

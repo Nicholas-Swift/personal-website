@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head> <!-- Header for general header stuff -->
+        <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/> <!-- For good view on mobile devices -->
+        <title>DictionRe</title>
+        <meta name="keywords" content="DictionRe, Dictionary, Diction, Regex, Synonym" />
+        <meta name="description" content="Enhance your sentences with DictionRe!" />
+        <link href="code/ns.css" rel="stylesheet" type="text/css" />
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+        <script type="text/javascript">
+            function myFunction() {
+                var mainscreen = document.getElementById("mainScreen");
+                var searchcontainer = document.getElementById("searchContainer");
+                var gifscreen = document.getElementById("gifScreen");
+                var outputscreen = document.getElementById("outputScreen");
+
+                $(mainscreen).animate({ opacity: '0' });
+                $(mainscreen).css({ marginLeft: "-4000px" });
+                $(searchcontainer).css({ marginLeft: "-4000px" });
+
+                $(gifscreen).animate({ opacity: '0' });
+                $(gifscreen).css({ marginLeft: '400px' });
+                $(gifscreen).animate({ opacity: '1' });
+                $(gifscreen).animate({ opacity: '0' });
+                $(gifscreen).css({ marginLeft: '-4000px' });
+
+                $(outputscreen).animate({ opacity: '0' });
+                $(outputscreen).css({ marginLeft: '400px' });
+                $(outputscreen).animate({ opacity: '1' });
+            }
+
+        </script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var mainscreen = document.getElementById("mainScreen");
+                var searchcontainer = document.getElementById("searchContainer");
+                var gifscreen = document.getElementById("gifScreen");
+                var outputscreen = document.getElementById("outputScreen");
+
+                $(document.getElementById("button1")).click(function () {
+                    //$(document.getElementById("mainScreen")).animate({opacity:'0'}, "slow");
+                    //$(document.getElementById("searchContainer")).animate({opacity:'0'}, "slow");
+
+                    //bring back main screen
+                    $(mainscreen).css({ marginLeft: "-400px" });
+                    $(searchcontainer).css({ marginLeft: "-185px" }); //-185 because look on css for searchContainer!!
+
+                    //get rid of gif screen
+                    $(gifscreen).css({ marginLeft: "-4000px" });
+
+                    //get rid of output screen
+                    $(outputscreen).css({ marginLeft: "-4000px" });
+                });
+                
+                $(document.getElementById("button2")).click(function () {
+                    //get rid of main screen
+                    $(mainscreen).css({ marginLeft: "-4000px" });
+                    $(searchcontainer).css({ marginLeft: "-4000px" }); //-185 because look on css for searchContainer!!
+
+                    //bring back gif screen
+                    $(gifscreen).css({ marginLeft: "-400px" });
+
+                    //get rid of output screen
+                    $(outputscreen).css({ marginLeft: "-4000px" });
+                });
+
+                $(document.getElementById("button3")).click(function () {
+                    //get rid of main screen
+                    $(mainscreen).css({ marginLeft: "-4000px" });
+                    $(searchcontainer).css({ marginLeft: "-4000px" }); //-185 because look on css for searchContainer!!
+
+                    //get rid of gif screen
+                    $(gifscreen).css({ marginLeft: "-4000px" });
+
+                    //bring back output screen
+                    $(outputscreen).css({ marginLeft: "auto" });
+                });
+            });
+        </script> 
+
+    </head>
+
+    <body>
+        
+        <button id="button1">Page One</button>
+        <button id="button2">Page Two</button>
+        <button id="button3">Page Three</button>
+
+        <!-- -->
+        <div class="mainScreen" id="mainScreen">
+            <!-- Title -->
+            <h1>DictionRe</h1>
+
+            <!-- Input Search -->
+            <div id="searchContainer">
+                <form action="../cgi-bin/provider.py" method="post" name="input-form" >
+                    <input id="field" name="field" type="text" />
+                    <button id="submit" name="submit" type="submit" value="Search" onclick=""/>
+                </form>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <center>Created by Nicholas Swift and Christopher Zitnik</center>
+                <center>Copyright &copy 2016 diction.re</center>
+            </div>
+        </div>
+
+        <!-- -->
+        <div class="gifScreen", id="gifScreen">
+            <!-- Loading Gif -->
+            <img src="code/small-load.gif" alt="Loading..." />
+        </div>
+
+        <!-- -->
+        <div class="outputScreen", id="outputScreen">
+            <h2>DictionRe</h2> <!-- Title -->
+
+            <p><span class="green">Blah blah this</span> <span class="blue">is the input sentence</span> and stuff here. Wow, colors!</p> <!-- Input Sentence -->
+            
+            <!-- Suggestions -->
+            <p>Between classes, Gwen had always leaned on his locker when he’d go to open it. She’d roll her eyes and shove off with one foot, leaving a black-heel mark on the painted metal, but she also left the smell of her perfume. The combination lock would still be warm from her butt. And the next break, Gwen would be leaned there, again</p>
+            <p>Blah blah blah blah yes balh eojifwe</p>
+            <p>This is text but needs to look better than just this but this is a rough idea of what it could look like?</p>
+
+            <!-- Footer -->
+            <div class="footer">
+                <center>Created by Nicholas Swift and Christopher Zitnik</center>
+                <center>Copyright &copy 2016 diction.re</center>
+            </div>
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1"/> <!-- For good view on mobile devices -->
+        <meta name="keywords" content="Nicholas Swift, Resume, Portfolio, Game of Crates, C++, C#, Python, SFML, OpenGL, DirectX, Game Development, Game Programming" />
+        <meta name="description" content="Here is a collection of my programming work, my blog, my resume, and more." /> <!--NOTE: CHANGE THE DESCRIPTION HERE-->
+
+        <link href="code/ns.css" rel="stylesheet" type="text/css" />
+        <link href="code/banner.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="code/lightbox/css/lightbox.css" /> <!-- Lightbox css -->
+        
+        <title>Nicholas Swift's Game Programmer Portfolio</title>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> <!-- Icon -->
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700" rel="stylesheet"> <!-- Fonts -->
+    </head>
+
+    <body>
+
+        <header>
+            <h2><a href="index">Nicholas Swift</a></h2>
+            <p><a href="contact">Contact</a></p>
+            <p>|</p>
+            <p><a href="about">About</a></p>
+            <p><a href="resume">Resume</a></p>
+            <p><a href="portfolio">Portfolio</a></p>
+            <p><a href="index">Home</a></p>
+        </header>
+
+        <!-- Main Portion of Page -->
+        <div class="color-wrapper">
+        <div class="main-wrapper">
+            <h1>Home</h1>
+            
+            <div class="box">
+                <h2>Welcome to my website!</h2>
+                <p>Looking for just code? Check out <a href="https://github.com/Nicholas-Swift" target="_blank">my GitHub</a>. If you're looking for my coding prowess, check out <a href="https://www.codeeval.com/profile/Nicholas-Swift/" target="_blank">my CodeEval</a> (top 10% of all C++ programmers on the site!). Other than that, take a look around the site! You can find my projects on <a href="portfolio">my portfolio</a>, my work experience and skills on <a href="resume">my resume</a>, and learn more about me on the <a href="about">about page</a>. Suggestions, offers, small talk? Let's <a href="contact">get in contact</a>.
+                </p>
+            </div>
+
+            <div class="box">
+                <h2>What can I do?</h2>
+                <ul>
+                    <li>General programming: I'm your man.</li>
+                    <li>Game programming? Sign me up! I'll be your tools developer, gameplay programmer, and graphics programmer all in one.</li>
+                    <li>Web developer, check out the site.</li>
+                </ul>
+            </div>
+
+            <div class="box">
+                <h2>Latest Project... Game of Crates</h2>
+                <div class="gallery">
+                    <figure class="gallery-item">
+                        <a href="images/Game of Crates/game-of-crates-d.png" data-lightbox="Game of Crates" data-title="Level Select"><img src="thumbs/Game of Crates/game-of-crates-thumb-d.png"/></a>
+                    </figure>
+                    <figure class="gallery-item">
+                        <a href="images/Game of Crates/menu-d.png" data-lightbox="Game of Crates" data-title="Menu"><img src="thumbs/Game of Crates/menu-thumb-d.png"/></a>
+                    </figure>
+                    <figure class="gallery-item">
+                        <a href="images/Game of Crates/options-d.png" data-lightbox="Game of Crates" data-title="Options"><img src="thumbs/Game of Crates/options-thumb-d.png" /></a>
+                    </figure>
+                    <figure class="gallery-item">
+                        <a href="images/Game of Crates/gameplay-2-d.png" data-lightbox="Game of Crates" data-title="Gameplay 2"><img src="thumbs/Game of Crates/gameplay-2-thumb-d.png"/></a>
+                    </figure>
+                </div>
+                <p><strong>When:</strong> Dec 2nd, 2015</p>
+                <p><strong>Contribution:</strong> Solo Developer</p>
+                <p><strong>Description:</strong> Game of Crates is a puzzle platform game with 15 levels, a simple objective, and a cool game mechanic that allows for some interesting level design. Can you brave all 15 levels?</p>
+                <p><strong>More Info:</strong> Using C++ and SFML, I've built on top of my Ultimate Pong game engine and added graphics, an inclusive menu, and more.</p>
+                <p><strong>Download:</strong> Current code is available for <a href="https://github.com/Nicholas-Swift/Game-of-Crates" target="_blank">download on GitHub</a> and the game download available for <a href="http://nicholaswswift.itch.io/game-of-crates" target="_blank">download on Itch.io</a>.</p>
+            </div>
+        </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <center>Copyright &copy 2016 nicholas-swift.com</center>
+        </div>
+
+    <script src="code/lightbox/js/lightbox-plus-jquery.min.js"></script> <!-- Lightbox jQuery and javascript -->
+    <script src="ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> <!-- jQuery -->
+
+    <script> // For Scrolling
+
+        var didScroll;
+        var lastScrollTop = 0;
+        var delta = 5;
+        var navbarHeight = $(‘header’).outerHeight();
+
+        // on scroll, let the interval function know the user has scrolled
+        $(window).scroll(function(event){
+            didScroll = true;
+        });
+
+        // run hasScrolled() and reset didScroll status
+        setInterval(function() {
+            if (didScroll) {
+                hasScrolled();
+                didScroll = false;
+            }
+        }, 250);
+
+        function hasScrolled() {
+            var st = $(this).scrollTop();
+
+            if (Math.abs(lastScrollTop — st) <= delta)
+                return;
+
+            // If current position > last position AND scrolled past navbar...
+            if (st > lastScrollTop && st > navbarHeight) {
+                // Scroll Down
+                $(‘header’).removeClass(‘nav-down’).addClass(‘nav-up’);
+            }
+            else {
+                // Scroll Up
+                // If did not scroll past the document (possible on mac)...
+                if(st + $(window).height() < $(document).height()) { 
+                    $(‘header’).removeClass(‘nav-up’).addClass(‘nav-down’);
+                }
+            }
+
+            lastScrollTop = st;
+        }
+    </script>
+
+    </body>
+
+</html>

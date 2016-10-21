@@ -1,0 +1,247 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+html {
+    width:100%;
+}
+
+body {
+	font-family:Roboto, Tahoma, Arial, sans-serif; /*add Lato infront of Tahoma*/
+    font-weight:300;
+    height:100%;
+    display:block;
+	background-color:#FFFFFF;
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+.page-wrapper {
+    max-width:990px;
+    margin:auto;
+    padding-bottom:2em;
+}
+
+.main-wrapper {
+    max-width:990px;
+    margin:auto;
+}
+
+.padding-wrapper {
+    padding:0px 25px 0px 25px;
+    margin:auto;
+}
+
+    .main-wrapper h1 {
+        display:none;
+    }
+
+    .main-wrapper h2 {
+        font-family:'Roboto', sans-serif;
+        font-weight:400;
+        font-size:18px;
+        text-transform:uppercase;
+        padding-top:35px;
+    }
+
+    .main-wrapper h3 {
+        font-family:'Roboto', sans-serif;
+        font-weight:400;
+        font-size:18px;
+    }
+
+    .main-wrapper p {
+        /*font-family:'Roboto', sans-serif;
+        font-weight:300;*/
+        font-size:16px;
+    }
+
+    .main-wrapper a:link {color:#cb4154; font-weight:400; text-decoration:none; text-shadow:none; -webkit-transition:1s}
+    .main-wrapper a:visited {color:#cb4154; font-weight:400; text-decoration: none; text-shadow:none;}
+    .main-wrapper a:hover, a:active, a:focus {color:#cb4154; font-weight:400; text-decoration:underline; -webkit-transition:1s}
+
+.divline { /*General div line*/
+	margin-top: 2px;
+	height: 1px;
+	border-bottom:1px solid #323232;
+}
+
+ul {
+    list-style-type:square;
+}
+
+li {
+    padding-bottom:4px;
+}
+
+.portfolio-img { /*For Portfolio*/
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    display:inline-block;
+    transition:all 1s ease;
+}
+
+/*--------------------------------------------------Stuff for Footer--------------------------------------------------------------*/
+
+.footer {
+    /*height:550px;
+	background-color:#323232;*/
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 50px 0px;
+}
+
+    .footer center {
+        font-family:'Roboto', sans-serif;
+        font-size:13px;
+        font-weight:400;
+        color:#323232;
+        text-transform:uppercase;
+    }
+
+
+
+/*--------------------------------------------------Stuff for Banner--------------------------------------------------------------*/
+/*
+.banner {
+    height:90px;
+	background-color:#323232;
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+    .banner h2 {
+        font-family:'Roboto', sans-serif;
+        font-size:20px;
+        font-weight:700;
+        color:#fff;
+        text-transform:uppercase;
+
+        display:inline-block;
+
+        padding-top:15px;
+        padding-left:25px;
+        float:left;
+    }
+
+    .banner p {
+        font-family:'Roboto', sans-serif;
+        font-size:13px;
+        font-weight:700;
+        color:#fff;
+        text-transform:uppercase;
+
+        display:inline-block;
+
+        padding-top:25px;
+        padding-left:0px;
+        padding-right:25px;
+        float:right;
+    }
+
+    .banner a:link {color:inherit; font-weight:700; text-decoration:none; text-shadow:none;}
+    .banner a:visited {color:inherit; font-weight:700; text-decoration: none; text-shadow:none;}
+    .banner a:hover {color:#808080 4s; font-weight:700; text-shadow:none;}
+    .banner a:active, a:focus {color:inherit; font-weight:700; text-decoration:none; text-shadow:0px 0px 1px #ffcece;} */
+
+/*-----------------------------------------------------Stuff for Mobile--------------------------------------------------------------*/
+
+.mobile-center {
+}
+
+.mobile-hide {
+    display:normal;
+}
+
+.desktop-hide {
+    display:none;
+}
+
+.desktop-hide-2 {
+    display:none;
+}
+
+/* First Tick */
+@media screen and (max-width:645px) {
+    .banner {
+        margin-top:-18px;
+        height:120px;
+        width:100%;
+    }
+
+        .banner h2 {
+            font-family:'Roboto', sans-serif;
+            font-size:20px;
+            font-weight:700;
+            color:#fff;
+            text-transform:uppercase;
+            /* text-shadow:0px 1px 1px #ffcece; */
+
+            display:block;
+
+            padding-top:25px;
+            padding-left:0px;
+            padding-right:0px;
+            float:none;
+
+            text-align:center;
+        }
+
+        .banner p {
+            font-size:13px;
+            display:inline;
+            float:none;
+            padding-left:12px;
+            padding-right:12px;
+        }
+
+    .mobile-center {
+            margin: auto;
+            text-align:center;
+            padding-top:0px;
+            margin-top:20px;
+    }
+
+    .mobile-hide {
+        display:none;
+    }
+
+    .desktop-hide {
+        display:inline;
+        margin: auto;
+    }
+
+    .desktop-hide-2 {
+        display:none;
+    }
+}
+
+/* Second Tick */
+@media screen and (max-width:415px) {
+    .banner {
+        height:142px;
+    }
+
+    .banner p {
+        padding-right:18px;
+        padding-left:18px;
+    }
+
+    .mobile-center {
+            margin: auto;
+            text-align:center;
+            padding-bottom:12px;
+    }
+
+    .mobile-hide {
+        display:none;
+    }
+
+    .desktop-hide {
+        display:none;
+    }
+
+    .desktop-hide-2 {
+        display:inline;
+        margin: auto;
+    }
+
+}

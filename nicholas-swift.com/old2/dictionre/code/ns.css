@@ -1,0 +1,152 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/* HTML and Body*/
+
+html {
+    width:100%;
+}
+
+body {
+	font-family:Roboto, Lato, Tahoma, Arial, sans-serif;
+    font-weight:300;
+    height:100%;
+    display:block;
+	background-color:#15191f;
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+}
+
+/* Divs */
+
+.mainScreen {
+    height:400px;
+    width:800px;
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin-top:-200px;
+    margin-left:-400px;
+    /*background-color:red; */
+}
+
+.gifScreen {
+    height:600px;
+    width:800px;
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin-top:-300px;
+    margin-left:-4000px;
+    background-color:red;
+}
+
+.outputScreen {
+    max-width:990px;
+    margin:auto;
+    margin-left:-4000px;
+    /*background-color:red;*/
+}
+
+/* Text */
+
+h1 {
+    font-family:'Roboto', sans-serif;
+    font-weight:700;
+    font-size:64px;
+    color:#fff;
+    /* text-transform:uppercase; */
+    text-align:center;
+}
+
+h2 {
+    font-family:'Roboto', sans-serif;
+    font-weight:700;
+    font-size:64px;
+    color:#fff;
+    /* text-transform:uppercase; */
+    text-align:center;
+}
+
+p {
+    font-family:'Roboto', sans-serif;
+        font-size:18px;
+        font-weight:700;
+        color:#fff;
+        padding-top:20px;
+        padding-left:0px;
+        padding-right:25px;
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: green;
+}
+
+/* Footer */
+
+.footer {
+    margin:0px 0px 0px 0px;
+    padding:50px 0px 0px 0px;
+}
+
+    .footer center {
+        font-family:'Roboto', sans-serif;
+        font-size:13px;
+        font-weight:400;
+        color:#fff;
+        text-transform:uppercase;
+    }
+
+/* Search Form */
+#searchContainer { /* div container containing the form */
+    text-align:center;
+    width:371px;
+    height:30px;
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin-left:-185px;
+    margin-top:-55px;
+    background-color:green;
+}
+
+#field { /* style the search input field */
+    float:left;
+    width:300px;
+    height:27px;
+    line-height:27px;
+    text-indent:10px;
+    font-family:Arial, sans-serif;
+    font-size:1em;
+    color:#333;
+    background:#fff;
+    border:solid 1px #d9d9d9;
+    border-top:solid 1px #c0c0c0;
+    border-right:none;
+}
+
+#submit { /* style the search button. Settings of line-height, font-size, text-indent used to hide submit value in IE */
+    float:left;
+    cursor:pointer; 
+    width:70px; 
+    height: 31px; 
+    line-height:0; 
+    font-size:0; 
+    text-indent:-999px;
+    color: transparent;
+    background: url(ico-search.png) no-repeat #4d90fe center; 
+    border: 1px solid #3079ED; 
+    /*-moz-border-radius: 2px; 
+    -webkit-border-radius: 2px; */
+}
+
+#submit:hover { /* style the search button hover state */
+    background: url(ico-search.png) no-repeat center #357AE8; 
+    border: 1px solid #2F5BB7;
+}
+
+.fclear {clear:both} /* Clear floats */

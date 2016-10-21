@@ -1,0 +1,28 @@
+﻿
+header {
+	background: #333;
+	color: #fff;
+	display: inline-flex;
+
+	height: 100px;
+	position: fixed;
+	top: 0;
+	transition: top 0.2s ease-in-out;
+	width: 100%;
+}
+
+header .h2 {
+	float: left;
+}
+
+header .p {
+	float: right;
+}
+
+header .a {
+	color: #fff;
+}
+
+.nav-up {
+	top: -100px;
+}

@@ -1,0 +1,76 @@
+html {
+    width: 100%;
+}
+
+body {
+    background: #333;
+}
+
+.color-wrapper {
+    background: #fff;
+    width: 100%;
+}
+
+.main-wrapper {
+
+    margin: 0 auto;
+    max-width: 50em;
+
+    line-height: 1.5;
+    padding: 4em 1em;
+
+    padding-left: 1em;
+    padding-right: 1em;
+
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    color: #555;
+}
+
+.gallery {
+
+    margin-top: 20px;
+
+    /* This will make children of the div align horizontally on the webpage, as in all of them in a row */
+    display: flex;
+
+    /*This makes sure that things will wrap rather than go off to the right of the screen.*/
+    flex-wrap: wrap;
+
+    /* This will center all the content in this div */
+    justify-content: right;
+}
+
+.gallery-item {
+    margin: 10px;
+}
+
+.footer {
+    margin: 0 auto;
+    max-width: 50em;
+
+    line-height: 1.5;
+    padding-top: 1em;
+    padding-bottom: 6em;
+
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    color: #555;
+}
+
+h1 {
+    font-size: 0;
+}
+
+h2 {
+  margin-top: 1em;
+  padding-top: 1em;
+
+  color: #333;
+}
+
+strong {
+    color: #333;
+}
+
+a:link {color:#cb4154; font-weight:400; text-decoration:none; text-shadow:none; -webkit-transition:1s}
+a:visited {color:#cb4154; font-weight:400; text-decoration: none; text-shadow:none;}
+a:hover, a:active, a:focus {color:#cb4154; font-weight:400; text-decoration:underline; -webkit-transition:1s}
