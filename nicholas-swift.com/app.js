@@ -1,7 +1,8 @@
 $(function() {
+
+    // Scrolling
     $(window).scroll( function(){
     
-       
         $('.fadeInBlock').each( function(i){
             
             var bottom_of_object = $(this).position().top + $(this).outerHeight();
@@ -15,14 +16,13 @@ $(function() {
             /* Adjust the "200" to either have a delay or that the content starts fading a bit before you reach it  */
             bottom_of_window = bottom_of_window;
 
-            if( middle_of_window > top_of_object) {
-                $(this).stop( true, true );
-                $(this).animate({'opacity':'1'}, 500);
-            }
-            else if( bottom_of_window > top_of_object ) {
+            // if( middle_of_window > top_of_object) {
+            //     $(this).stop( true, true );
+            //     $(this).animate({'opacity':'1'}, 500);
+            // }
+            if( bottom_of_window > top_of_object ) {
                 $(this).animate({'opacity':'1'}, 1500);
             }
         });
-    
     });
 });

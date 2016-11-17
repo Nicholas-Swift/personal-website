@@ -28,13 +28,18 @@ p {
 	font-size: 1.15em;
 }
 
-h1, h2 {
-	font-size: 2em;
-	font-family: 'Crimson Text', serif;
+h1 {
+	font-size: 6em;
+	font-weight: 400;
+}
+
+h2 {
+	font-size: 2.5em;
+	font-weight: 400;
 }
 
 h3 {
-	font-size: 1.5em;
+	font-size: 1.6em;
 	margin-bottom: 1.5em;
 }
 
@@ -123,20 +128,12 @@ nav div a:hover {
 	position: absolute;
 	text-align: center;
 	height: 150px;
+	width: 90%;
 
 	top: calc(50% - 75px);
 	left: 50%;
 	transform: translateX(-50%) translateY(-50%);
 }
-
-.intro .text h1 {
-	font-size: 6em;
-	font-weight: 400;
-}
-
-/*.intro .text p {
-	font-size: 1.1em;
-}*/
 
 .intro .down {
 	text-align: center;
@@ -145,9 +142,42 @@ nav div a:hover {
 	width: 100%;
 }
 
+@media only screen and (max-width: 680px) {
+
+h1 {
+	font-size: 5em;
+}
+
+}
+
+@media only screen and (max-width: 580px) {
+
+h1 {
+	font-size: 4em;
+}
+
+.intro .text p {
+	font-size: 1em;
+}
+
+}
+
+@media only screen and (max-width: 480px) {
+
+h1 {
+	font-size: 3em;
+}
+
+.intro .text p {
+	font-size: 0.7em;
+}
+
+}
+
 /* Products */
 
 .products {
+	padding: 1em;
 	padding-top: 8em;
 	padding-bottom: 8em;
 	margin: 0 auto;
@@ -186,17 +216,33 @@ nav div a:hover {
     max-width: 100%;
 }
 
-.products .product {
+@media only screen and (max-width: 780px) {
+
+
+.products .product2 {
 	margin: 0 auto;
-	max-width: 600px;
-	margin-top: 4em;
-	margin-bottom: 4em;
+	margin-top: 2em;
 }
 
-.products .product img {
-	height: auto; 
-    width: auto; 
-    max-width: 100%;
+.products .product2 .col-50:nth-child(1) {
+	width: calc(100% - 2em);
+}
+
+.products .product2 .col-50:nth-child(2) {
+	width: calc(100% - 2em);
+}
+
+}
+
+@media only screen and (max-width: 680px) {
+}
+
+@media only screen and (max-width: 580px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+
 }
 
 /* Skills */
@@ -226,10 +272,107 @@ nav div a:hover {
 	padding: 1em;
 }
 
+.title-col-25 {
+	margin: 1em;
+	width: calc(25% - 2em);
+	float: left;
+}
+
+.list-col-25 {
+	margin: 1em;
+	width: calc(25% - 2em);
+	float: left;
+}
+
+.skills-tic-0 {
+	display: inline;
+}
+
+.skills-tic-1 {
+	display: none;
+}
+
+.skills-tic-2 {
+	display: none;
+}
+
+@media only screen and (max-width: 1180px) {
+
+	.skills p {
+		font-size: 1em;
+	}
+
+	.skills h3 {
+		font-size: 1.1em;
+	}
+}
+
+@media only screen and (max-width: 1044px) {
+
+	.skills-tic-0 {
+		display: none;
+	}
+
+	.skills-tic-1 {
+		display: inline;
+	}
+
+	.skills-tic-2 {
+		display: none;
+	}
+
+}
+
+@media only screen and (max-width: 840px) {
+
+	.skills {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.skills .col-100 {
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+
+	.skills .col-50 {
+		text-align: center;
+		padding: 0;
+		margin: 0;
+		width: 50%;
+	}
+
+	.skills p {
+		font-size: 0.9em;
+	}
+
+	.skills-tic-0 {
+		display: none;
+	}
+
+	.skills-tic-1 {
+		display: none;
+	}
+
+	.skills-tic-2 {
+		display: inline;
+	}
+
+}
+
+@media only screen and (max-width: 580px) {
+
+	.skills p {
+		font-size: 0.85em;
+	}
+
+}
+
 /* About */
 
 .about {
-	padding: 4em;
+	padding: 1em;
 	padding-top: 8em;
 	padding-bottom: 8em;
 	margin: 0 auto;
@@ -246,7 +389,7 @@ nav div a:hover {
 /* Contact */
 
 .contact {
-	padding: 4em;
+	padding: 1em;
 	padding-top: 8em;
 	padding-bottom: 8em;
 	margin: 0 auto;
@@ -259,23 +402,46 @@ nav div a:hover {
 }
 
 .contact form input {
+	font-family: 'Crimson Text', serif;
 	color: #333;
 	margin: 0.5em;
-	font-size: 0.8em;
+	font-size: 0.9em;
 	padding: 1em;
 	width: 400px;
 	height: 20px;
+
+	outline: none;
+	box-shadow: none;
+	border: 1px solid #ccc;
+
+	width: 80%;
+	max-width: 400px;
+}
+
+.contact form input[type="text"]:focus {
+	border-color: #4885ed;
 }
 
 .contact form textarea {
+	font-family: 'Crimson Text', serif;
 	color: #333;
 	margin: 0.5em;
 	line-height: 1.5em;
-	font-size: 0.8em;
-	border-color: #ccc;
+	font-size: 0.9em;
+	border: 1px solid #ccc;
 	width: 400px;
 	padding: 1em;
 	height: 150px;
+
+	outline: none;
+	box-shadow: none;
+
+	width: 80%;
+	max-width: 400px;
+}
+
+.contact form textarea:focus {
+	border-color: #4885ed;
 }
 
 .contact form input[type=submit] {
@@ -284,16 +450,32 @@ nav div a:hover {
 	color: black;
 	margin: 0.5em;
 	line-height: 1em;
-	font-size: 0.8em;
+	font-size: 0.9em;
 	width: calc(400px + 2em);
 	height: calc(20px + 2em);
 	cursor:pointer;
+
+	width: calc(80% + 2em);
+	max-width: calc(400px + 2em);
+}
+
+.contact form input[type=submit]:hover {
+	outline: none;
+	border: solid 1px #bbb;
+	background-color: #fefefe;
+}
+
+.contact form input[type=submit]:active {
+	outline: none;
+	border: solid 1px #4885ed;
+	background-color: #fdfdfd;
 }
 
 /* Footer */
 
 .footer {
-	padding: 4em;
+	padding-top: 4em;
+	padding-bottom: 4em;
 	margin: 0 auto;
 
 	text-align: center;
@@ -319,7 +501,7 @@ nav div a:hover {
 }
 
 .footer .social a:nth-child(1):hover {
-	color: #961580;
+	color: #6e5494;
 }
 .footer .social a:nth-child(2):hover {
 	color: #007bb5;
@@ -331,13 +513,18 @@ nav div a:hover {
 	color: #dd4b39;
 }
 
-/*.footer .social a:hover {
-	color: white;
-}*/
-
 .footer p {
 	font-size: 14px;
 	margin-top: 3em;
+}
+
+@media only screen and (max-width: 480px) {
+
+.footer .social a {
+	padding: 1em;
+}
+
+
 }
 
 /* Styles */
@@ -370,6 +557,7 @@ nav div a:hover {
 
 .color-red {
 	color: crimson;
+	/*color: #4885ed;*/
 }
 
 /* Grid */
