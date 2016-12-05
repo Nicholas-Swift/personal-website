@@ -142,6 +142,37 @@ nav div a:hover {
 	width: 100%;
 }
 
+.intro .social {
+	padding-top: 1em;
+	/*margin-left: 5px;*/
+}
+
+.intro .social a {
+	padding: 1.5em;
+	transition: 300ms;
+}
+
+.intro .social a:link {
+    color: white;
+}
+
+.intro .social a:visited {
+    color: white;
+}
+
+.intro .social a:nth-child(1):hover {
+	color: #6e5494;
+}
+.intro .social a:nth-child(2):hover {
+	color: #007bb5;
+}
+.intro .social a:nth-child(3):hover {
+	color: #00AB6C;
+}
+.intro .social a:nth-child(4):hover {
+	color: #dd4b39;
+}
+
 @media only screen and (max-width: 680px) {
 
 h1 {
